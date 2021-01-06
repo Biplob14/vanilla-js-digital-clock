@@ -1,0 +1,73 @@
+:root {
+    --cle-bg: #060a1f;
+    --pure-white: #FFF;
+    --blue: #2196f3;
+    --box-bg-shadow: #127fd6;
+    --light-shadow:  hsl(209, 61%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--cle-bg);
+}
+
+#clock h2 {
+    position: relative;
+    display: block;
+    color: var(--pure-white);
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 1.8em;
+}
+
+#clock #time {
+    display: flex;
+}
+
+#clock #time div {
+    position: relative;
+    margin: 0 5px;
+}
+
+#clock #time div span {
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 180px;
+    background: var(--blue);
+    color: var(--pure-white);
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    z-index: 10;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .2);
+}
+
+#clock #time div span:nth-child(2) {
+    height: 60px;
+    font-size: 1.7em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    z-index: 9;
+    box-shadow: none;
+    background: var(--box-bg-shadow);
+}
+
+#clock #time div:last-child span {
+    background: var(--light-shadow);
+}
